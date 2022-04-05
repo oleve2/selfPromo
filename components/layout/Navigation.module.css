@@ -1,0 +1,19 @@
+.nav_ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_li {
+  margin-right: 20px;
+}
+
+.nav_header {
+  border: 1px solid lightblue;
+  margin-top: 5px;
+}
+
+.nav_div {
+  padding: 10px;
+}
+

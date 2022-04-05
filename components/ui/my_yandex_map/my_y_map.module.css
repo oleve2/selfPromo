@@ -1,0 +1,16 @@
+
+/* desktop */
+@media (min-width: 650px) {
+  .wrp {
+    width: 900px;
+    height: 400px;
+  }
+}
+
+/* mobile */
+@media (max-width: 650px) {
+  .wrp {
+    width: 500px;
+    height: 250px;
+  }
+}

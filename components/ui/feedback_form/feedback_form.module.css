@@ -1,0 +1,8 @@
+.form_question {
+  max-width: 600px;
+}
+.form_block {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
