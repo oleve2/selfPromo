@@ -24,22 +24,22 @@ export const Footer = () => {
           <ul className={fs.socials_ul}>
             <li className={fs.social_image}> 
               <Link href="https://www.whatsapp.com/">
-                <a> <Image src={picWhatsapp} height={40} width={40}/> </a>
+                <a> <Image src={picWhatsapp} height={40} width={40} alt="whatsapp"/> </a>
               </Link>
             </li>
             <li className={fs.social_image}> 
               <Link href="https://telegram.org/">
-                <a> <Image src={picTelegram} height={40} width={40}/> </a>
+                <a> <Image src={picTelegram} height={40} width={40} alt="tg"/> </a>
               </Link>
             </li>
             <li className={fs.social_image}> 
               <Link href="https://www.facebook.com/">
-                <a> <Image src={picFacebook} height={40} width={40}/> </a>
+                <a> <Image src={picFacebook} height={40} width={40} alt="fb"/> </a>
               </Link>
             </li>
             <li className={fs.social_image}> 
               <Link href="https://www.instagram.com/">
-                <a> <Image src={picInstagram} height={40} width={40}/> </a>
+                <a> <Image src={picInstagram} height={40} width={40} alt="insta"/> </a>
               </Link>
             </li>                        
           </ul>
