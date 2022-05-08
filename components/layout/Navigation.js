@@ -7,9 +7,9 @@ export default function Navigation() {
       <nav className={classes.nav_div}>
         <ul className={classes.nav_ul}>
           <li className={classes.nav_li}> <Link href="/">Главная</Link> </li>
-          <li className={classes.nav_li}> <Link href="/therapy">Терапия</Link> </li>
-          <li className={classes.nav_li}> <Link href="/blog">Блог</Link> </li>
-          <li className={classes.nav_li}> <Link href="/media">Медиа</Link> </li>
+          <li className={classes.nav_li}> <Link href="/about">Обо мне</Link> </li>
+          <li className={classes.nav_li}> <Link href="/articles">Статьи</Link> </li>
+          <li className={classes.nav_li}> <Link href="/reviews">Отзывы</Link> </li>
           <li className={classes.nav_li}> <Link href="/contacts">Контакты</Link> </li>
         </ul>
       </nav>

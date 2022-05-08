@@ -9,7 +9,7 @@
 }
 
 .nav_header {
-  border: 1px solid lightblue;
+  border: 1px solid black; /*lightblue;*/
   margin-top: 5px;
 }
 

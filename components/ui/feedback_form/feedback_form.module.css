@@ -1,5 +1,6 @@
 .form_question {
   max-width: 600px;
+  margin: 0px auto;
 }
 .form_block {
   display: flex;

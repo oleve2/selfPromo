@@ -1,0 +1,77 @@
+/* homepage first block - card -------------------------- */
+.block_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+}
+.block_info_image {
+  max-width: 350px;
+  max-height: 350px;
+  margin: 40px;
+}
+.block_info_rightSection {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  margin: 40px;
+}
+.block_info_rightSection__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.block_info_rightSection__content_name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+
+/* homepage second block - therapies -------------------------- */
+.block_therapy__ul {
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  list-style: none;
+}
+
+.block_therapy__li {
+  border: 1px solid black;
+  width: 260px;
+  min-height: 180px;
+  margin: 5px 20px;
+  padding: 10px;
+  justify-content: space-around;  
+  background-color: #D5D5FE;
+}
+
+.therapCard_head {
+  background-color: #FFF8F8;
+  padding: 10px;
+}
+
+.therapCard_head__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.therapCard_head__subtitle {
+  margin-bottom: 10px;
+}
+
+
+.therapCard_body_ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0px;
+  list-style: none;
+  margin-top: 20px;
+}
+.therapCard_body_ul__li {
+  margin-bottom: 10px;
+}
+
+
+

@@ -1,4 +1,5 @@
 
+/*
 .div_block {
   border: 1px solid lightblue;
   min-height: 200px;
@@ -6,11 +7,11 @@
   margin: 10px 0 10px 0;
 }
 
-/* desktop */
+
 @media (min-width: 650px) {
   .block_info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .tasks_ul {
@@ -31,7 +32,7 @@
   }  
 }
 
-/* mobile */
+
 @media (max-width: 650px) {
   .block_info {
     display: grid;
@@ -48,7 +49,7 @@
   
   .tasks_div {
     border: 1px solid black;
-    /*max-width: 250px;*/
+
     min-height: 90px;
     margin: 5px 20px;
     padding: 10px;
@@ -65,17 +66,7 @@
   width: auto;
   height: auto;
 }
-
-/*
-.form_question {
-  max-width: 600px;
-}
-.form_block {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}*/
-
+*/
 
 
 
