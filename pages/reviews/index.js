@@ -7,7 +7,7 @@ import rev from './PageReviews.module.css';
 import placeHolder from '../../public/placeholder.png';
 
 export default function Reviews(props) {
-  const [groupPrograms, setGroupPrograms] = useState([
+  const [groupPrograms, setGroupPrograms] = useState(props.data); /*useState([
     {id: 1, reviewName: 'Отзывы о личной терпаии', photoLink: '', cntStars: 4, showReview: false, reviews: [
       {id:1, userName: 'Петя Петров',   reviewText: 'И нет сомнений, что некоторые особенности внутренней политики и по сей день остаются уделом либералов, которые жаждут быть представлены в исключительно положительном свете.'},
       {id:2, userName: 'Иван Иванов',   reviewText: 'Банальные, но неопровержимые выводы, а также диаграммы связей своевременно верифицированы.'},
@@ -23,7 +23,7 @@ export default function Reviews(props) {
       {id:2, userName: 'Иван Иванов',   reviewText: 'Сложно сказать, почему элементы политического процесса неоднозначны и будут функционально разнесены на независимые элементы.'},
       {id:3, userName: 'Сидор Сидоров', reviewText: 'Акционеры крупнейших компаний, инициированные исключительно синтетически, призваны к ответу.'},
     ]},        
-  ])
+  ])*/
 
   const toggleReviews = (id) => {
     let grpProgUpd = groupPrograms.map( (a) => {
@@ -36,6 +36,11 @@ export default function Reviews(props) {
     setGroupPrograms(grpProgUpd);
   }
 
+  useEffect(() => {
+    document.title = "Дейнекина Айгуль: Отзывы";
+  }, []);  
+
+  //
   return (
     <div>
       <h2>Отзывы о групповых программах</h2>
@@ -45,7 +50,7 @@ export default function Reviews(props) {
         <div className={rev.review_content}>
           <div className={rev.review_img}> <Image src={placeHolder} alt="photo" /> </div>
           <div className={rev.content_text}>
-            <div>#{item.id} : {item.reviewName}</div>
+            <div>{item.reviewName}</div> {/* #{item.id} :  */}
             <div>stars: {item.cntStars}</div>
             <div>
               <button type="button" onClick={() => {toggleReviews(item.id)}}>
@@ -76,3 +81,14 @@ export default function Reviews(props) {
       </div>
   )
 }
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  let url = process.env.APP_URL;
+  let res = await fetch(`${url}/reviews`, {method: 'GET'});
+  let data = await res.json();
+  // Pass data to the page via props
+  return {props: {data}}
+}
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from 'next/image';
 
 import HomeTherapyItem from './HomeTherapyItem';
@@ -18,6 +18,11 @@ export const PageHome = () => {
     {id: 5, title: 'Направление 5', subtitle:'', branches: ['123','321']},
     {id: 6, title: 'Направление 6', subtitle:'', branches: ['123','321']},
   ])
+
+
+  useEffect(() => {
+    document.title = "Дейнекина Айгуль: Главная";
+  }, []);
 
   //
   return (
