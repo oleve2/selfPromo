@@ -2,17 +2,19 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import profPhoto from '../../public/Portrait_Placeholder.png';
+import reviewPhoto from '../../public/Portrait_Placeholder.png';
+import profPhoto from '../../public/aigul_dein.jpg';
+
 import s from '../../components/PageHome/PageHome.module.css';
 import abt from './PageAbout.module.css';
 
 export default function About(props) {
   //
   const [confs, setConfs] = useState([
-    {id:1, name: 'Конференция ЕМДР', text: '???', result: 'результат 1'},
-    {id:2, name: 'Конференция 2', text: '???', result: 'результат 2'},
-    {id:3, name: 'Конференция 3', text: '???', result: 'результат 3'},
-    {id:4, name: 'Конференция 4', text: '???', result: 'результат 4'},
+    {id:1, name: 'Конференция ЕМДР', text: 'текст', result: 'результат 1'},
+    {id:2, name: 'Конференция 2', text: 'текст', result: 'результат 2'},
+    {id:3, name: 'Конференция 3', text: 'текст', result: 'результат 3'},
+    {id:4, name: 'Конференция 4', text: 'текст', result: 'результат 4'},
   ]);
 
   const [clientReviews, setClientReviews] = useState([
@@ -35,10 +37,15 @@ export default function About(props) {
         <div className={s.block_info_image}> <Image  src={profPhoto} alt="photo" /> </div>
         <div className={s.block_info_rightSection}>
           <div className={s.block_info_rightSection__content}>
-            <h4>Образование</h4>
+            <h3>Образование</h3>
+            <div className={abt.div_edu}>2002-2008 – Педагог, Московский гуманитарный университет, специалист по направлению &quot;Педагогика и психология&quot;, специализация &quot;Менеджмент в образовании&quot;,  диплом с отличием, 7065ч</div>
+            <div className={abt.div_edu}>2002-2007 – Психолог, Московский гуманитарный университет специалист по направлению &quot;Психология&quot;, специализация &quot;Психология креативного развития человека (и его потенциала)&quot;,  диплом с отличием, 8804ч</div>
           </div>
           <div className={s.block_info_rightSection__content}>
-            <h4>Дипломы и квалификации</h4>
+            <h3>Дипломы и квалификации</h3>
+            <div className={abt.div_edu}>2020- по настоящее время – обучение гештальт-терапии, МИГИП</div>
+            <div className={abt.div_edu}>2020-2021 – EMDR Basic Training and supervision, Ehud (Udi) Oren, Ph.D., St-Petersdurg, Russia (56ч, 10ч)</div>
+            <div className={abt.div_edu}>2009-2011 – Танцевально-двигательный психотерапевт Институт Практической психологии и Психоанализа, специалист в сфере практической психологии и психокоррекции, диплом с отличием, 842ч</div>
           </div>
         </div>
       </div>      
@@ -62,7 +69,7 @@ export default function About(props) {
         { clientReviews.map( (item) => {
           return <li key={item.id} className={abt.review_li}>
             <div className={abt.review_li__left}>
-              <div className={abt.review_li__img}> <Image  src={profPhoto} alt="photo" /> </div>
+              <div className={abt.review_li__img}> <Image  src={reviewPhoto} alt="photo" /> </div>
               <div>{item.userName}</div>
               <div>{item.reviewDate}</div>
             </div>

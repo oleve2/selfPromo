@@ -1,26 +1,21 @@
 
-/* desktop */
+/*desktop*/
 @media (min-width: 650px) {
   .wrapper {
     max-width: 900px;
     margin: 0 auto;
-  
-    min-height: 100vh; 
-    display: grid;
-    grid-template-rows: auto 1fr auto;  
   }
-  
 }
 
-/* mobile */
+/*mobile*/
 @media (max-width: 650px) {
   .wrapper {
-    /*max-width: 900px;*/
-    margin: 0 auto;
-  
-    min-height: 100vh; 
-    display: grid;
-    grid-template-rows: auto 1fr auto;  
-  }
-  
+    margin: 5px 10px;
+    
+  }  
 }
+
+.wrapper_outer {
+  margin: 5px;
+}
+

@@ -6,24 +6,12 @@ import rev from './PageReviews.module.css';
 //import profPhoto from '../../public/Portrait_Placeholder.png';
 import placeHolder from '../../public/placeholder.png';
 
+import phPrivateTherapy from '../../public/group_programs/private_therapy.jpg';
+import phEMDR from '../../public/group_programs/emdr.png';
+import phProkrast from '../../public/group_programs/prokrastination.jpg';
+
 export default function Reviews(props) {
-  const [groupPrograms, setGroupPrograms] = useState(props.data); /*useState([
-    {id: 1, reviewName: 'Отзывы о личной терпаии', photoLink: '', cntStars: 4, showReview: false, reviews: [
-      {id:1, userName: 'Петя Петров',   reviewText: 'И нет сомнений, что некоторые особенности внутренней политики и по сей день остаются уделом либералов, которые жаждут быть представлены в исключительно положительном свете.'},
-      {id:2, userName: 'Иван Иванов',   reviewText: 'Банальные, но неопровержимые выводы, а также диаграммы связей своевременно верифицированы.'},
-      {id:3, userName: 'Сидор Сидоров', reviewText: 'Кстати, некоторые особенности внутренней политики призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.'},
-    ]},
-    {id: 2, reviewName: 'Отзывы о ЕМДР сессиях', photoLink: '', cntStars: 4, showReview: false, reviews: [
-      {id:1, userName: 'Петя Петров',   reviewText: 'Значимость этих проблем настолько очевидна, что современная методология разработки не оставляет шанса для прогресса профессионального сообщества.'},
-      {id:2, userName: 'Иван Иванов',   reviewText: 'Как принято считать, независимые государства заблокированы в рамках своих собственных рациональных ограничений.'},
-      {id:3, userName: 'Сидор Сидоров', reviewText: 'Сложно сказать, почему элементы политического процесса неоднозначны и будут описаны максимально подробно.'},
-    ]},
-    {id: 3, reviewName: 'Отзывы о проекте “Прокрастинация”', photoLink: '', cntStars: 5, showReview: false, reviews: [
-      {id:1, userName: 'Петя Петров',   reviewText: 'Но некоторые особенности внутренней политики призывают нас к новым свершениям, которые, в свою очередь, должны быть объединены в целые кластеры себе подобных.'},
-      {id:2, userName: 'Иван Иванов',   reviewText: 'Сложно сказать, почему элементы политического процесса неоднозначны и будут функционально разнесены на независимые элементы.'},
-      {id:3, userName: 'Сидор Сидоров', reviewText: 'Акционеры крупнейших компаний, инициированные исключительно синтетически, призваны к ответу.'},
-    ]},        
-  ])*/
+  const [groupPrograms, setGroupPrograms] = useState(props.data); 
 
   const toggleReviews = (id) => {
     let grpProgUpd = groupPrograms.map( (a) => {
@@ -36,6 +24,14 @@ export default function Reviews(props) {
     setGroupPrograms(grpProgUpd);
   }
 
+  const PicNyId = (id) => {
+    if (id === 1) {return phPrivateTherapy}
+    if (id === 2) {return phEMDR}
+    if (id === 3) {return phProkrast}
+  }
+
+  const [pics, setPics] = useState([phPrivateTherapy, phEMDR, phProkrast])
+
   useEffect(() => {
     document.title = "Дейнекина Айгуль: Отзывы";
   }, []);  
@@ -45,13 +41,13 @@ export default function Reviews(props) {
     <div>
       <h2>Отзывы о групповых программах</h2>
 
-      { groupPrograms.map( (item) => {
+      { groupPrograms.map( (item, index) => {
         return <div  key={item.id}>
         <div className={rev.review_content}>
-          <div className={rev.review_img}> <Image src={placeHolder} alt="photo" /> </div>
+          <div className={rev.review_img}> <Image src={pics[index]} alt="photo" /> </div>
           <div className={rev.content_text}>
-            <div>{item.reviewName}</div> {/* #{item.id} :  */}
-            <div>stars: {item.cntStars}</div>
+            <div className={rev.content_text_name}>{item.reviewName}</div> {/* #{item.id} :  */}
+            <div>Рейтинг: {item.cntStars}/5</div>
             <div>
               <button type="button" onClick={() => {toggleReviews(item.id)}}>
                 { item.showReview ? 'Скрыть отзывы' : 'Перейти к отзывам' } 
