@@ -2,7 +2,7 @@
 /* conferences -------------------------- */
 
 /*desktop*/
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .conf_ul {
     display: flex;  
     flex-direction: row;
@@ -24,7 +24,7 @@
 }
 
 /*mobile*/
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .conf_ul {
     display: flex;  
     flex-direction: column;
