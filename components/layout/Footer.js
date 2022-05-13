@@ -15,8 +15,8 @@ export const Footer = () => {
       <div className={fs.div_footer__content}>
 
         <div className={fs.footer_block}>
-          <h4 className={fs.txt_center}>Персональная инфа</h4>
-          <div className={fs.txt_center}>Персональная страница Такого-сякого</div>
+          <h4 className={fs.txt_center}>Дейнекина Айгуль</h4>
+          {/*<div className={fs.txt_center}>Персональная страница Такого-сякого</div>*/}
         </div>
 
         <div className={fs.footer_block}>
@@ -52,7 +52,7 @@ export const Footer = () => {
       </div>
 
       <div className={fs.div_footer__content}>
-        <div className={fs.txt_center}>Copyright © 2022, Personal Page Plus, powered by Unknown</div>
+        <div className={fs.txt_center}>Copyright © 2022, Personal Page Plus, powered by oleve2</div>
       </div>
     </div>
   )

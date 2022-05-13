@@ -23,7 +23,9 @@ export default function Contacts(props) {
       <div>Подробности Вы можете узнать по контактам или отправить вопрос с формы</div>
       <FeedbackForm/>
       <br/><br/>
-      <MyYandexMap/>
+      
+      <MyYandexMap />
+      
     </div>
   )
 }
